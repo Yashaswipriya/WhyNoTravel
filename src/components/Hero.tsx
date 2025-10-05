@@ -16,7 +16,8 @@ export default function Hero() {
 
   // Scale up the "O" as user scrolls
   const scale = useTransform(scrollYProgress, [0, 0.7], [1, 50]);
-  const opacity = useTransform(scrollYProgress, [0.5, 0.7], [0, 1]);
+  const opacity = useTransform(scrollYProgress, [0.6, 0.7], [0, 1]);
+  const textOpacity = useTransform(scrollYProgress, [0.3, 0.45], [1, 0]);
 
   return (
     <section ref={ref} className="relative h-[170vh] bg-black text-white overflow-hidden">
@@ -42,7 +43,8 @@ export default function Hero() {
       </div>
       {/* Hero Text */}
       <div className="sticky top-0 flex flex-col justify-center items-center h-screen text-center z-10 pointer-events-none">
-        <h1 className={`text-[15vw] leading-[1.1] ${righteous.className}`}>
+        <motion.div style={{ opacity: textOpacity }} className="flex flex-col items-center text-center">
+        <h1 className={`text-[15vw] leading-[1.1] ${righteous.className}`} >
           WHY
         </h1>
 
@@ -61,7 +63,7 @@ export default function Hero() {
         <h1 className={`text-[15vw] leading-[1.1] ${righteous.className}`}>
           TRAVEL
         </h1>
-
+        </motion.div>
       {/* Video Reveal */}
       <motion.video
         style={{ opacity }}
