@@ -33,7 +33,7 @@ export default function Hero() {
   });
 
   const textOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const clipSize = useTransform(scrollYProgress, [0, 0.7], ["6.5vw", "150vmax"]);
+  const clipSize = useTransform(scrollYProgress, [0, 1.5], ["6.5vw", "150vmax"]);
   const clipPath = useMotionTemplate`circle(${clipSize} at ${oCenter.x}px ${oCenter.y}px)`;
 
   return (
