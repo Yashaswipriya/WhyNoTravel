@@ -19,7 +19,7 @@ export default function YouTubeCard({ videoId }: YouTubeCardProps) {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <div
-        className="relative w-full max-w-8xl mx-auto overflow-hidden cursor-pointer"
+        className="relative w-full max-w-7xl mx-auto overflow-hidden cursor-pointer"
         style={{ aspectRatio: "16/9" }}
         onClick={() => setIsPlaying(true)}
       >
