@@ -32,7 +32,7 @@ export default function About() {
   return (
     <section
       ref={ref}
-      className="relative w-full py-20 md:py-32 overflow-hidden"
+      className="relative w-full py-20 md:py-25 overflow-hidden"
     >
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         <div
