@@ -58,13 +58,9 @@ export default function Hero() {
            autoRampDuration={0.6}
         />
       </div>
-
-      {/* Main container for sticky elements */}
       <div className="sticky top-0 h-screen">
-        {/* Video Layer (sits underneath text) */}
         <motion.div
           style={{ clipPath }}
-          // THE FIX: Changed from "fixed" to "absolute" within a sticky parent
           className="absolute inset-0 z-10" 
         >
           <video
@@ -76,19 +72,14 @@ export default function Hero() {
             playsInline
           />
         </motion.div>
-        
-        {/* Text Layer (sits on top) */}
         <div className="relative z-20 flex h-full items-center justify-center">
           <div className="flex flex-col items-center text-center pointer-events-none">
-            {/* Line 1 */}
             <motion.h1 
               style={{ opacity: textOpacity }}
               className={`text-[15vw] leading-none ${righteous.className}`}
             >
               WHY
             </motion.h1>
-            
-            {/* Line 2 */}
             <div className="flex items-center">
               <motion.h1 
                 style={{ opacity: textOpacity }}
@@ -102,8 +93,6 @@ export default function Hero() {
                 className="w-[15vw] h-[15vw]" 
               />
             </div>
-            
-            {/* Line 3 */}
             <motion.h1 
               style={{ opacity: textOpacity }}
               className={`text-[15vw] leading-none ${righteous.className}`}

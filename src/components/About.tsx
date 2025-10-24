@@ -25,7 +25,6 @@ export default function About() {
     offset: ["start end", "end start"],
   });
 
-  // Subtle tilt for the video on scroll
   const videoRotateX = useTransform(scrollYProgress, [0, 1], ["-4deg", "4deg"]);
   const videoOpacity = useTransform(scrollYProgress, [0, 0.3], [0.85, 1]);
 
@@ -39,7 +38,6 @@ export default function About() {
           style={{ perspective: "1000px" }}
           className="flex flex-col md:flex-row gap-16 md:gap-24 items-center"
         >
-          {/* LEFT: Text */}
           <motion.div
             className="w-full md:w-1/2 flex flex-col space-y-8 ml-0 md:ml-8 lg:ml-16 2xl:ml-10"
             initial="hidden"
@@ -71,7 +69,6 @@ export default function About() {
             </motion.p>
           </motion.div>
 
-          {/* RIGHT: Portrait Video */}
           <motion.div
             className="w-full md:w-1/2 flex justify-center"
             initial={{ opacity: 0, x: 80 }}
